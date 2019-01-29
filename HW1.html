@@ -4,19 +4,26 @@
  high = 100
  guess = (low+high)/2
  
- alert=prompt("Is your number 50?")
+user = prompt("Is your number 50?")
  
- while(user !="yes") {
+ while(user !="yes")
+{
  
- if (user==">") {
+	if (user==">") 
+	{
  
- low=guess+1 }
+	 low=guess+1 
+	}
  
- if (user=="<") {
+ 	if (user=="<") 
+ 	{
  
- high=guess-1 }
+	 high=guess-1 
+	 }
  
- guess=Math.floor((low+high)/2)
- user=prompt("Is your number" +guess) }
+ 	guess=Math.floor((low+high)/2)
+ 	
+	user=prompt("Is your number" +guess) 
+}
  alert("I win!")
  </script>
