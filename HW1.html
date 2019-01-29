@@ -2,17 +2,17 @@
 
  low = 1
  high = 100
- guess = (low/high)/2
+ guess = (low+high)/2
  
  alert=prompt("Is your number 50?")
  
- while(user!="yes") {
+ while(user !="yes") {
  
  if (user==">") {
  
  low=guess+1 }
  
- if (user==">") {
+ if (user=="<") {
  
  high=guess-1 }
  
