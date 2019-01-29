@@ -6,24 +6,22 @@
  
 user = prompt("Is your number 50?")
  
- while(user !="yes")
+while(user !="yes")
 {
  
 	if (user==">") 
 	{
- 
-	 low=guess+1 
+		low=guess+1 
 	}
  
  	if (user=="<") 
  	{
+		high=guess-1 
+	}
  
-	 high=guess-1 
-	 }
- 
- 	guess=Math.floor((low+high)/2)
+ 	guess=Math.round((low+high)/2)
  	
-	user=prompt("Is your number" +guess) 
+	user = prompt("Is your number" +guess) 
 }
- alert("I win!")
+alert("I win!")
  </script>
