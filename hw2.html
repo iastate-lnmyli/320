@@ -4,18 +4,16 @@ shift = parseInt(prompt("Enter shift"))
 text = (prompt("Enter text"))
 output = ""
 
-for (i=0;i<text.length;i++)
+for(i=0;i<text.length;i++)
 {
    b = text.charCodeAt(i)
    
-   if(b >= 65 && x <= 90)
+   if(b >= 65 && b <= 90)
    {
      
      b = b - 65;
-     
      b = b + shift;
      b = b % 26;
-     
      b = b + 65;
     }
     
