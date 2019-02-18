@@ -17,10 +17,9 @@ function process() {
   for (i=0; i<words.length; i++) {
     current_word = words[i]
     word_misspelled = true
-    
 
-minDistance = -1;
-minDistanceWord = "";
+   minDistance = -1;
+   minDistanceWord = "";
 
     for (j=0; j < english_words.length; j++) 
     {
@@ -32,7 +31,7 @@ minDistanceWord = "";
     }
     
     distance = editing_distance(english_words[j], current_word)
-    if (distance < minDistance | | minDistance == -1)
+    if (distance < minDistance || minDistance == -1)
     {
        minDistance = distance;
        minDistanceWord = english_words[j];
@@ -42,7 +41,7 @@ minDistanceWord = "";
     if(word_mispelled)
     {
        
-      y = y + "You have misspelled the word "+current_word+", did you mean " +minDistanceWord+ "\n\"
+      y = y + "You have misspelled the word "+current_word+", did you mean " +minDistanceWord+ "\n"
     }
   }
   if (y.length == 0) 
