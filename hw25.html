@@ -9,7 +9,7 @@
 
 function process() {
   x = document.getElementById("input").value
-  x = x.toLowerCase().replace(/\W+/g, " ").trim() // 
+  x = x.toLowerCase().replace(/\W+/g, " ").trim() 
   words = x.split(" ")
   y = ""
   for (i=0; i<words.length; i++) {
@@ -29,5 +29,6 @@ function process() {
   }
   document.getElementById("output").value = y
 }
+res = editing-distance("the", "hte") // res == 2
 
 </script>
