@@ -7,8 +7,17 @@
   
 <script>
 
-current_word = words[i]
-word_misspelled = true
+function process() {
+
+  x = document.getElementById("input").value
+  x = x.toLowerCase().replace(/\W+/g, " ").trim() // you don't need to understand this line
+  words = x.split(" ")
+  y = ""
+  
+  for (i=0; i<words.length; i++) {
+    current_word = words[i]
+    word_misspelled = true
+    
 
 minDistance = -1;
 minDistanceWord = "";
