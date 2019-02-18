@@ -7,28 +7,40 @@
   
 <script>
 
-function process() {
-  x = document.getElementById("input").value
-  x = x.toLowerCase().replace(/\W+/g, " ").trim() 
-  words = x.split(" ")
-  y = ""
-  for (i=0; i<words.length; i++) {
-    current_word = words[i]
-    word_misspelled = true
-    for (j=0; j < english_words.length; j++) {
-      if (english_words[j] === current_word) {
+current_word = words[i]
+word_misspelled = true
+
+minDistance = -1;
+minDistanceWord = "";
+
+    for (j=0; j < english_words.length; j++) 
+    {
+      if (english_words[j] === current_word)
+    {
         word_misspelled = false
-      }
     }
-    if (word_misspelled) {
+      else
+    }
+    
+    dist = editing_distance(english_words[j], current_word)
+    if (distance < minDistance | | minDistance == -1)
+    {
+       minDistance = distance;
+       minDistanceWord = english_words[j];
+       }
+     }
+    }
+    if(word_mispelled)
+    {
+       
       y = y + "You have misspelled the word "+current_word+"\n"
     }
   }
-  if (y.length == 0) {
+  if (y.length == 0) 
+  {
     y = "No words in your text have been misspelled"
   }
   document.getElementById("output").value = y
 }
-res = editing_distance("the", "hte") // res == 2
 
 </script>
