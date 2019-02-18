@@ -1,0 +1,37 @@
+<script>
+  students = [
+    {
+      netid: "alyrose",
+      name: "Alyssa",
+      lastname: "Jennings",
+      grade: "A+",
+      gender: "f"
+    },
+    {
+      netid: "mmiller3",
+      name: "Daisy",
+      lastname: "Miller",
+      grade: "A+",
+      gender: "f"
+    },
+    {
+      netid: "evgeny",
+      name: "Evgeny Mikhaylovich",
+      lastname: "Chukharev-Hudilainen",
+      grade: "D+",
+      gender: "m"
+    }
+  ]
+
+  for (i=0; i<students.length; i++) {
+    if(gender=="m") 
+    {
+    alert("Mr" + students[i].lastname + ", \n\nYour grade is " + students[i].grade)
+  }
+  
+  if(gender=="f")
+  {
+  alert("Mrs" + students[i].lastname + ", \n\nYour grade is " + students[i].grade)
+  }
+
+</script>
