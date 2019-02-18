@@ -26,7 +26,7 @@ function process() {
     {
     
     distance = editing_distance(english_words[j], current_word)
-    if (distance < minDistance || minDistance == -1)
+    if(distance < minDistance || minDistance == -1)
     {
        minDistance = distance;
        minDistanceWord = english_words[j];
@@ -34,7 +34,7 @@ function process() {
      }
      
     }
-    if(word_mispelled)
+    if (word_misspelled)
     {
       y = y + "You have misspelled the word "+current_word+", did you mean " +minDistanceWord+ "\n"
     }
